@@ -1,5 +1,6 @@
 ---
-title: Goldydocs
+title: Cloudbet Community Wiki
+type: docs
 ---
 
 {{< blocks/cover title="Welcome to Goldydocs: A Docsy Example Project!" image_anchor="top" height="full" >}}
