@@ -124,9 +124,9 @@ version = "0.0"
 url_latest_version = "https://example.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/google/docsy-example"
+github_repo = "https://github.com/cloudbet/wiki"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/google/docsy"
+github_project_repo = "https://github.com/cloudbet/wiki"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
@@ -166,7 +166,7 @@ sidebar_search_disable = true
 # If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
 # add "hide_feedback: true" to the page's front matter.
 [params.ui.feedback]
-enable = true
+enable = false
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
 yes = 'Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
 no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
@@ -193,7 +193,7 @@ enable = false
   name = "Trustpilot"
   url = "https://www.trustpilot.com/review/www.cloudbet.com"
   icon = "fa-solid fa-star"
-  desc = "the power of customer reviews"
+  desc = "Customer reviews"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
   name = "GitHub"
