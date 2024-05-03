@@ -144,8 +144,8 @@ offlineSearch = true
 prism_syntax_highlighting = false
 
 [params.copyright]
-  authors = "Docsy Authors | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) | "
-  from_year = 2018
+  authors = "Cloudbet Community | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) | "
+  from_year = 2013
 
 # User interface configuration
 [params.ui]
