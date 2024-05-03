@@ -1,5 +1,5 @@
 ---
-title: Cloudbet Community Wiki
+title: Community Wiki
 type: docs
 ---
 
