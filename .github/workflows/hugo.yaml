@@ -54,8 +54,8 @@ jobs:
         env:
           # For maximum backward compatibility with Hugo modules
           # disable production to remove google analytics and other production-only features
-          # HUGO_ENVIRONMENT: production
-          # HUGO_ENV: production
+          HUGO_ENVIRONMENT: staging
+          HUGO_ENV: staging
           TZ: Etc/UTC
         run: |
           hugo \
