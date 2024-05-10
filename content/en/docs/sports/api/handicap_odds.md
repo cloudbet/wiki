@@ -22,4 +22,4 @@ params: "handicap=0.5",
 price: 3.3
 ```
 
-![Handicap Odds](/sports/api/handicap_odds.png)
+![Handicap Odds](/handicap_odds.png)
