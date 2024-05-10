@@ -5,7 +5,7 @@ weight: 1
 type: docs
 ---
 
-The Cloudbet Community Wiki serves as a repository of knowledge, designed to support your experience with Cloudbet's platform. Here, developers, users, and enthusiasts collaborate to document APIs, answer frequently asked questions, and share best practices. These resources include:
+The [Cloudbet](https://www.cloudbet.com/) Community Wiki serves as a repository of knowledge, designed to support your experience with Cloudbet's platform. Here, developers, users, and enthusiasts collaborate to document APIs, answer frequently asked questions, and share best practices. These resources include:
 
 - **API Documentation:** Detailed descriptions, usage instructions, and examples to help you integrate and utilize Cloudbet's APIs effectively.
 - **FAQs:** Answers to commonly asked questions.
