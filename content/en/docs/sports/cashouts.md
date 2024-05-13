@@ -23,7 +23,7 @@ The cashout amount depends on the potential return of the original bet and the o
 
 #### Full Cashout Example
 
-Consider a bet placed on a 3-way market. The initial bet was 10 EUR at odds of 1.4 (Home win), with a total potential return of 14 EUR.
+Consider a bet placed on a 3-way market. The initial bet was EUR 10 at odds of 1.4 (Home win), with a total potential return of EUR 14.
 
 Suppose current odds are:
 
@@ -53,7 +53,7 @@ In this example, we assume the odds have shifted:
 | Draw | 6.02 |
 | Away | 18.1 |
 
-To cash out 8 EUR of the potential return:
+To cash out EUR 8 of the potential return:
 
 ```math
 \tag*{(3)} \text{CashoutAmount} = 8 - \left(\frac{8}{6.02} + \frac{8}{18.1}\right) = 6.229
@@ -75,10 +75,10 @@ We further assume the current odds:
 | Draw | 3.51 |
 | Away | 4.23 |
 
-Final cashout for the remaining 6 EUR potential return:
+Final cashout for the remaining EUR 6 potential return:
 
 ```math
-\tag*{(5)} \text{CashoutAmount} = 6 - \left(\frac{6}{3.51} + \frac{6}{4.23}\right) = 2.872 \text{EUR}
+\tag*{(5)} \text{CashoutAmount} = 6 - \left(\frac{6}{3.51} + \frac{6}{4.23}\right) = 2.872
 ```
 
 After this transaction, there is no remaining potential return, and the original bet is fully settled.
