@@ -1,8 +1,8 @@
 ---
 title: Cloudbet API
 linkTitle: API
-description: Programmatic access to Cloudbet's sportsbook and other services.
-weight: 2
+description: Programmatic access to Cloudbet's sportsbook and services.
+weight: 200
 type: docs
 ---
 

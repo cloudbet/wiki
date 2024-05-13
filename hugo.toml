@@ -45,6 +45,10 @@ pygmentsStyle = "tango"
 [permalinks]
 blog = "/:section/:year/:month/:day/:slug/"
 
+[params.katex]
+enable = true
+html_dom_element = "document.body"
+
 # Image processing configuration.
 [imaging]
 resampleFilter = "CatmullRom"
