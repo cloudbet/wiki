@@ -3,8 +3,6 @@ title: Markets
 date: 2024-05-13
 description: >
   How to work with markets from Cloudbet API Feed and using the corresponding market URLs in the Cloudbet Trading API to place bets.
-categories: [Sports API]
-tags: [api, docs]
 type: docs
 weight: 1
 ---

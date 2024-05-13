@@ -3,8 +3,6 @@ title: Handicap Odds
 date: 2024-05-10
 description: >
   How to work with handicap markets on the Cloudbet API.
-categories: [Sports API]
-tags: [api, docs]
 type: docs
 weight: 2
 ---
