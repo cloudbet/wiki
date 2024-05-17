@@ -9,10 +9,6 @@ weight: 1
 
 ### Terminology
 
-#### Market URL
-
-The `market url` can be compiled from the feed and takes the form of `<market_key>/<outcome>?<grouping_parameters>`.
-
 #### Market Key
 
 - The `market_key` is the unique identifier for a market and optionally time period with its own settlement rules.
@@ -57,6 +53,16 @@ The `market url` can be compiled from the feed and takes the form of `<market_ke
     "side": "BACK"
   }
 ...
+```
+
+#### Market URL
+
+The `market url` can be compiled from the feed and takes the form of `<market_key>/<outcome>?<grouping_parameters>`. This can be sent in the payload of the [`/v3/bets/place` endpoint](https://www.cloudbet.com/api/?urls.primaryName=Trading#/Trading/PlaceBet) when placing a bet.
+
+**Market URL Example**
+
+```json
+"marketUrl": soccer.total_goals/over?total=3
 ```
 
 #### Split and Variables
