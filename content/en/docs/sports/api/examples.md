@@ -306,7 +306,7 @@ Sample response for NBA with Moneyline and Handicap markets:
 
 ### Query a single event
 
-For a single event, the API provides you all available markets.
+For a single event, the API provides you all available markets. To delve into details about how our markets are structured, please look at the [Cloudbet markets](./markets.md) page.
 
 ```sh
 curl -X 'GET' "https://sports-api.cloudbet.com/pub/v2/odds/events/6473660" \
