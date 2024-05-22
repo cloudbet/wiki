@@ -14,6 +14,8 @@ When a horse is declared a non-runner in a race, any bets placed on that horse a
 
 Without adjusting the odds, the payouts would disproportionately favor bettors in light of the new, higher probability of winning.
 
+For the most current rules and settlement guidelines, please consult the [Cloudbet Sportsbook Rules](https://www.cloudbet.com/en/help/rules).
+
 ## Computing Reduction Factors
 
 Reduction factors are calculated based on the odds of the non-runners. The factor reflects the impact of the withdrawn horse on the race:
@@ -24,7 +26,11 @@ Reduction factors are calculated based on the odds of the non-runners. The facto
 
 Where DecimalOdds are the odds of the non-runner.
 
-## Applying Reduction Factors to Adjust Odds
+### Application Threshold
+
+It's worth noting that if the reduction factor for the withdrawn horse is less than 2.5% it is not applied. This policy is in place to avoid minor adjustments that have negligible impact on the odds and payouts.
+
+### Applying Reduction Factors to Adjust Odds
 
 The adjusted odds for remaining horses after a withdrawal can be computed using the formula:
 
