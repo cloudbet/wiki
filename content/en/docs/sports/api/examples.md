@@ -520,10 +520,150 @@ Sample response for a single event
 }
 ```
 
-## Sports Odds
-
 ## Account API for Balance Tracking
+
+### Query list of available currencies
+
+The first thing for automated betting is knowing about our funds available. Using the endpoint below, you can find out the list of currencies available.
+
+```sh
+curl -X 'GET' "https://sports-api.cloudbet.com/pub/v1/account/currencies" \
+-H "accept: application/json" \
+-H "X-API-Key: <API Key>" \
+-H "Content-Type: application/json"
+```
+
+Sample response:
+
+```json
+{
+  "currencies": ["BONUS_EUR", "BTC", "ETH", "PLAY_EUR"]
+}
+```
+
+### Query balance for a currency
+
+This allows you to query your balance in a specific currency. Here we query `PLAY_EUR`, our test funds currency that currently can be enabled on your account upon request.
+
+```sh
+curl -X 'GET' "https://sports-api.cloudbet.com/pub/v1/account/currencies/PLAY_EUR/balance" \
+-H "accept: application/json" \
+-H "X-API-Key: <API Key>" \
+-H "Content-Type: application/json"
+```
+
+Sample response:
+
+```json
+{
+  "amount": "984.69"
+}
+```
 
 ## Trading API to place bets
 
+Once you know which currency you want to place bets in, as well as the markets you want to place your bet on, you can call the place bet endpoint.
+
+### Place Bet Request
+
+This is a `POST` endpoint where the request body contains details about your desired market and currency. Use a unique, randomly generated uuid in the `referenceId` field of your request.
+
+Sample Place Bet request on an Asian Handicap market for a Soccer event:
+
+```sh
+curl -X 'POST' "https://sports-api.cloudbet.com/pub/v3/bets/place" \
+-H "accept: application/json" \
+-H "X-API-Key: <API Key>" \
+-H "Content-Type: application/json"
+-d '{"acceptPriceChange":"BETTER","currency":"PLAY_EUR","eventId":"7190563","marketUrl":"soccer.asian_handicap/home?handicap=0.5","price":"1.65","referenceId":"1891d3a0-0af8-11ec-b536-11ca86b8c5a4","stake":"1.1"}'
+```
+
+Sample success response:
+
+```json
+{
+  "referenceId": "1891d3a0-0af8-11ec-b536-11ca86b8c5a4",
+  "price": "1.652",
+  "eventId": "7190563",
+  "marketUrl": "soccer.asian_handicap/home?handicap=0.5",
+  "side": "BACK",
+  "currency": "PLAY_EUR",
+  "stake": "1.1",
+  "status": "ACCEPTED",
+  "error": ""
+}
+```
+
+**NOTE**: Quite often, your bet will not be immediately accepted while we process your betting request. Thus you will receive a `PENDING_ACCEPTANCE` response instead:
+
+```json
+{
+  "referenceId": "1891d3a0-0af8-11ec-b536-11ca86b8c5a4",
+  "price": "1.652",
+  "eventId": "7190563",
+  "marketUrl": "soccer.asian_handicap/home?handicap=0.5",
+  "side": "BACK",
+  "currency": "PLAY_EUR",
+  "stake": "1.1",
+  "status": "PENDING_ACCEPTANCE",
+  "error": ""
+}
+```
+
+### Bet Status Request
+
+If you receive a `PENDING_ACCEPTANCE` response, you can then check the status of the bet with the `referenceId` field from your place bet request to confirm if it got accepted or rejected. This bet status request can also be used generally to query the status of your bets.
+
+```sh
+curl -X 'POST' "https://sports-api.cloudbet.com/pub/v3/bets/1891d3a0-0af8-11ec-b536-11ca86b8c5a4/status
+" \
+-H "accept: application/json" \
+-H "X-API-Key: <API Key>" \
+-H "Content-Type: application/json"
+-d '{"acceptPriceChange":"BETTER","currency":"PLAY_EUR","eventId":"7190563","marketUrl":"soccer.asian_handicap/home?handicap=0.5","price":"1.65","referenceId":"1891d3a0-0af8-11ec-b536-11ca86b8c5a4","stake":"1.1"}'
+```
+
+The response for the above bet status request will have a similar format to the bet placement request above.
+
+**NOTE**: Your bet might get rejected for different reasons, with recommended new stake and price on the rejection payload. Please update your payload with a new `referenceId` and try again with updated fields if this happens.
+
 ## Bet History for settlements
+
+You can obtain a full history of your API bets, in addition to being able to view your settled bets in the [Bet History](https://www.cloudbet.com/en/sports/bets?tab=settled) section of the Cloudbet Website.
+
+```sh
+curl -X 'POST' "https://sports-api.cloudbet.com/pub/v3/bets/history?limit=5&offset=0
+" \
+-H "accept: application/json" \
+-H "X-API-Key: <API Key>" \
+-H "Content-Type: application/json"
+-d '{"acceptPriceChange":"BETTER","currency":"PLAY_EUR","eventId":"7190563","marketUrl":"soccer.asian_handicap/home?handicap=0.5","price":"1.65","referenceId":"1891d3a0-0af8-11ec-b536-11ca86b8c5a4","stake":"1.1"}'
+```
+
+Sample response:
+
+```json
+{
+  "bets": [
+    {
+      "referenceId": "1891d3a0-0af8-11ec-b536-11ca86b8c5a4",
+      "price": "1.652",
+      "eventId": "7190563",
+      "marketUrl": "soccer.asian_handicap/home?handicap=0.5",
+      "side": "BACK",
+      "currency": "PLAY_EUR",
+      "stake": "1.1",
+      "createTime": "2024-05-29T03:53:02Z",
+      "status": "ACCEPTED",
+      "returnAmount": "0.0",
+      "eventName": "Manchester City v Manchester United",
+      "sportsKey": "soccer",
+      "competitionId": "18",
+      "categoryKey": "usa",
+      "customerReference": "5b1eb89f-5c87-4bd2-b8e9-82197fd6b986",
+      "error": ""
+    }
+  ],
+  "totalBets": "1"
+}
+```
