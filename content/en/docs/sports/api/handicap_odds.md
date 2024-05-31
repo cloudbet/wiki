@@ -20,4 +20,4 @@ params: "handicap=0.5",
 price: 3.3
 ```
 
-![Handicap Odds](/wiki/images/handicap_odds.png)
+![Handicap Odds](/wiki/images/cloudbet-handicap-odds.png)
