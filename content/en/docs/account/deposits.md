@@ -28,11 +28,7 @@ The "deposit address" is the specific address on a blockchain network where tran
 
 ### Sending Assets to the Wrong Network
 
-One of the most common errors is sending assets to an address on the wrong network. For example, sending USDT (ERC-20) to a BNB Smart Chain address can result in lost funds. Always double-check the network selected in your wallet before confirming the transaction.
-
-### Unsupported Network or Address
-
-Sending assets to a network not supported by the receiving wallet or platform is another frequent issue. If you send tokens to a network the wallet does not recognize, the transaction might complete, but the funds will be irrecoverable. Ensure that the receiving platform supports the network for the selected asset.
+A common error during the deposit or withdrawal process occurs when cryptocurrency is sent to a technically correct address that belongs to a different blockchain network than intended. For instance, if you deposit USDT (ERC-20), which is native to the Ethereum network, into an address on the BNB Smart Chain that supports the same token format, the transaction will process, but the funds will not appear in your Ethereum-based wallet. This issue arises from network incompatibility, despite the address's validity. To prevent such errors, always ensure that both the token and the network selected for your transaction are exactly supported by and correspond to the specifications of the receiving wallet. Avoid losing your assets due to network discrepancies.
 
 ### Wrong Address Format
 
