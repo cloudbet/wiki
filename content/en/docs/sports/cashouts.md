@@ -3,7 +3,7 @@ title: Understanding Cashouts
 linkTitle: Cashouts
 description: Explaining the concept of cashouts in sports betting, including how to calculate cashout amounts and the conditions for full and partial cashouts.
 type: docs
-weight: 2
+weight: 5
 ---
 
 Cloudbet allow bettors to settle bets early, securing a return before the event concludes with cashouts. This feature improves control over betting strategies, providing an opportunity to lock in profits or minimize losses based on real-time developments in the event.
