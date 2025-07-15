@@ -56,8 +56,8 @@ jobs:
           # Temporarily set to staging environment to avoid postCSS error
           # Error: error building site: POSTCSS: failed to transform "/scss/main.css" (text/css). Check your PostCSS installation; install with "npm install postcss-cli". See https://gohugo.io/hugo-pipes/postcss/: binary with name "npx" not found
           # TODO: check how to move to production environment
-          HUGO_ENVIRONMENT: staging
-          HUGO_ENV: staging
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
           TZ: Etc/UTC
         run: |
           hugo \
