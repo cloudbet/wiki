@@ -50,6 +50,13 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Node.js dependencies for PostCSS
+        run: |
+          npm install postcss postcss-cli autoprefixer
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
