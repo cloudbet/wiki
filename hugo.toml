@@ -104,6 +104,8 @@ section = ["HTML", "print", "RSS"]
 
 [params]
 privacy_policy = "https://www.cloudbet.com/en/security/privacy-policy"
+google_site_verification = "ypkmbnP4XsKYL60AjIIw7xgnlqt9eMtn0i1_jb1mzfw"
+
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
